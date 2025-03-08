@@ -1,8 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { Event } from '@/types';
+// import { ref } from 'vue';
+
+defineProps<{ event: Event }>()
+
+</script>
 
 <template>
-  <div class="event-card">
-    <h1>This is an event page</h1>
+  <div class="event-class">
+      <div class="event-card">
+      <h2>{{ event.title }}</h2>
+      <p>{{ event.description }} </p>
+      <span>@{{ event.time }} on {{ event.date }}</span>
+    </div>
   </div>
 </template>
 
