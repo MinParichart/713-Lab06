@@ -32,8 +32,4 @@ defineProps<{ event: Event }>()
   text-decoration: none;
   color: inherit;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> recover-lab6
 </style>

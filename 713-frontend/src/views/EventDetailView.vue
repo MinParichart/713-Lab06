@@ -5,10 +5,6 @@ import { ref } from 'vue';
 const event = ref<Event>()
 const props = defineProps<{ id: string }>()
 const id = Number(props.id)
-<<<<<<< HEAD
-
-=======
->>>>>>> recover-lab6
 eventService
   .getEvent(id)
   .then((response) => {
