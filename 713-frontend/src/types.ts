@@ -29,3 +29,6 @@ export interface MessageState {
     message: string
   }
 
+export interface EventState {
+    event: Event | null
+  }
