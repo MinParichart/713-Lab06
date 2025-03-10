@@ -5,6 +5,7 @@ import EventRegisterView from '@/views/event/RegisterView.vue'
 import EventListView from '@/views/EventListView.vue'
 import NetworkErrorView from '@/views/NetworkErrorView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
+import nProgress from 'nprogress'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -68,8 +69,16 @@ const router = createRouter({
         name: 'not-found',
         component: NotFoundView,
     },
-
   ],
 })
+
+router.beforeEach(() => {
+    nProgress.start()
+  })
+
+  router.afterEach(() => {
+    nProgress.done()
+  })
+
 
 export default router // complie แบบ typeSript
